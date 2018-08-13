@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0316E04C20E07ADE00A66829 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0316E04B20E07ADE00A66829 /* GroupsViewController.swift */; };
+		0316E04E20E07BA300A66829 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0316E04D20E07BA300A66829 /* Group.swift */; };
+		0316E05020E07BE200A66829 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0316E04F20E07BE200A66829 /* Person.swift */; };
+		0316E05220E07C6400A66829 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0316E05120E07C6400A66829 /* Expense.swift */; };
+		0316E05620E07EAD00A66829 /* GroupStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0316E05520E07EAD00A66829 /* GroupStore.swift */; };
 		0332AA8D20CB11CF0061FE12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0332AA8C20CB11CF0061FE12 /* AppDelegate.swift */; };
-		0332AA8F20CB11CF0061FE12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0332AA8E20CB11CF0061FE12 /* ViewController.swift */; };
 		0332AA9220CB11CF0061FE12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0332AA9020CB11CF0061FE12 /* Main.storyboard */; };
 		0332AA9520CB11CF0061FE12 /* Splitty.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0332AA9320CB11CF0061FE12 /* Splitty.xcdatamodeld */; };
 		0332AA9720CB11CF0061FE12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0332AA9620CB11CF0061FE12 /* Assets.xcassets */; };
 		0332AA9A20CB11CF0061FE12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0332AA9820CB11CF0061FE12 /* LaunchScreen.storyboard */; };
 		0332AAA520CB11CF0061FE12 /* SplittyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0332AAA420CB11CF0061FE12 /* SplittyTests.swift */; };
 		0332AAB020CB11CF0061FE12 /* SplittyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0332AAAF20CB11CF0061FE12 /* SplittyUITests.swift */; };
+		033DCF0F20E9DDF00047B911 /* GroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033DCF0E20E9DDF00047B911 /* GroupDetailViewController.swift */; };
+		034C5C2120EAB0AB00EF9525 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034C5C2020EAB0AB00EF9525 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0316E04B20E07ADE00A66829 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
+		0316E04D20E07BA300A66829 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		0316E04F20E07BE200A66829 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		0316E05120E07C6400A66829 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		0316E05520E07EAD00A66829 /* GroupStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupStore.swift; sourceTree = "<group>"; };
 		0332AA8920CB11CF0061FE12 /* Splitty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Splitty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0332AA8C20CB11CF0061FE12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0332AA8E20CB11CF0061FE12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0332AA9120CB11CF0061FE12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0332AA9420CB11CF0061FE12 /* Splitty.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Splitty.xcdatamodel; sourceTree = "<group>"; };
 		0332AA9620CB11CF0061FE12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +59,8 @@
 		0332AAAB20CB11CF0061FE12 /* SplittyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplittyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0332AAAF20CB11CF0061FE12 /* SplittyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplittyUITests.swift; sourceTree = "<group>"; };
 		0332AAB120CB11CF0061FE12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		033DCF0E20E9DDF00047B911 /* GroupDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailViewController.swift; sourceTree = "<group>"; };
+		034C5C2020EAB0AB00EF9525 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +88,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0316E05320E07E1400A66829 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0316E04D20E07BA300A66829 /* Group.swift */,
+				0316E04F20E07BE200A66829 /* Person.swift */,
+				0316E05120E07C6400A66829 /* Expense.swift */,
+				0316E05520E07EAD00A66829 /* GroupStore.swift */,
+				034C5C2020EAB0AB00EF9525 /* User.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0316E05420E07E2F00A66829 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0316E04B20E07ADE00A66829 /* GroupsViewController.swift */,
+				033DCF0E20E9DDF00047B911 /* GroupDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		0332AA8020CB11CE0061FE12 = {
 			isa = PBXGroup;
 			children = (
@@ -100,12 +133,13 @@
 			isa = PBXGroup;
 			children = (
 				0332AA8C20CB11CF0061FE12 /* AppDelegate.swift */,
-				0332AA8E20CB11CF0061FE12 /* ViewController.swift */,
 				0332AA9020CB11CF0061FE12 /* Main.storyboard */,
 				0332AA9620CB11CF0061FE12 /* Assets.xcassets */,
 				0332AA9820CB11CF0061FE12 /* LaunchScreen.storyboard */,
 				0332AA9B20CB11CF0061FE12 /* Info.plist */,
 				0332AA9320CB11CF0061FE12 /* Splitty.xcdatamodeld */,
+				0316E05320E07E1400A66829 /* Data */,
+				0316E05420E07E2F00A66829 /* View Controllers */,
 			);
 			path = Splitty;
 			sourceTree = "<group>";
@@ -259,9 +293,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0332AA8F20CB11CF0061FE12 /* ViewController.swift in Sources */,
+				0316E05220E07C6400A66829 /* Expense.swift in Sources */,
+				033DCF0F20E9DDF00047B911 /* GroupDetailViewController.swift in Sources */,
+				0316E05020E07BE200A66829 /* Person.swift in Sources */,
+				0316E05620E07EAD00A66829 /* GroupStore.swift in Sources */,
 				0332AA9520CB11CF0061FE12 /* Splitty.xcdatamodeld in Sources */,
+				034C5C2120EAB0AB00EF9525 /* User.swift in Sources */,
 				0332AA8D20CB11CF0061FE12 /* AppDelegate.swift in Sources */,
+				0316E04C20E07ADE00A66829 /* GroupsViewController.swift in Sources */,
+				0316E04E20E07BA300A66829 /* Group.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
