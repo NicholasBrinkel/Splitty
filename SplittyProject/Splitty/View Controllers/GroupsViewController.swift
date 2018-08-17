@@ -11,20 +11,31 @@ import UIKit
 class GroupsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     let cellId = String(describing: GroupsCell.self)
-    var groupStore = GroupStore()
+    var groupStore: GroupStore!
     
     @IBAction func addGroup(_ sender: UIBarButtonItem) {
         groupStore.addGroup()
         tableView.reloadData()
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.groupStore = User.groupStore
         
         tableView.delegate = self
         tableView.dataSource = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        smoothlyDeselectItems(tableView)
+    }
 }
 
 extension GroupsViewController: UITableViewDataSource {
@@ -49,7 +60,12 @@ extension GroupsViewController: UITableViewDataSource {
 
 extension GroupsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = storyboard?.instantiateViewController(withIdentifier: String(describing: GroupDetailViewController.self)) as! GroupDetailViewController
+        let cell = tableView.cellForRow(at: indexPath) as! GroupsCell
         
+        detailVC.configure(group: cell.group)
+        
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }
 
@@ -57,8 +73,12 @@ class GroupsCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var picture: UIImageView!
     
+    var group: Group!
+    
     func configure(group: Group) {
+        self.group = group
+        
         name.text = group.name
         picture.image = group.picture
-    }
+    }   
 }

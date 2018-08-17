@@ -32,10 +32,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iml-T0-Wra">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="iml-T0-Wra">
                                                     <rect key="frame" x="317" y="8" width="50" height="50.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="0dp-Sq-Loc"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="5Ig-Rj-tXH"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="DLT-4M-k3A"/>
                                                         <constraint firstAttribute="height" constant="50" id="fHu-vG-8vx"/>
                                                     </constraints>
                                                 </imageView>
@@ -113,10 +115,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="65n-O8-yl2">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="65n-O8-yl2">
                                         <rect key="frame" x="235" y="0.0" width="100" height="100"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="QhS-3v-pyZ"/>
                                             <constraint firstAttribute="width" secondItem="65n-O8-yl2" secondAttribute="height" multiplier="1:1" id="aPn-zp-UUK"/>
+                                            <constraint firstAttribute="width" constant="100" id="vPN-8F-wVQ"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -148,13 +152,37 @@
                                 <rect key="frame" x="0.0" y="192" width="375" height="475"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="yd6-aY-Dvx">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ExpenseCell" id="yd6-aY-Dvx" customClass="ExpenseCell" customModule="Splitty" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yd6-aY-Dvx" id="9PX-pH-g6m">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expense Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeH-Qh-9FK">
+                                                    <rect key="frame" x="35" y="12" width="114.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount Owed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSt-QI-wZD">
+                                                    <rect key="frame" x="231" y="12" width="109" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="HSt-QI-wZD" firstAttribute="centerY" secondItem="9PX-pH-g6m" secondAttribute="centerY" id="7Md-TE-FJC"/>
+                                                <constraint firstItem="qeH-Qh-9FK" firstAttribute="leading" secondItem="9PX-pH-g6m" secondAttribute="leadingMargin" constant="20" id="Cdj-GX-xmn"/>
+                                                <constraint firstItem="HSt-QI-wZD" firstAttribute="trailing" secondItem="9PX-pH-g6m" secondAttribute="trailingMargin" constant="-20" id="VVi-sR-Xdb"/>
+                                                <constraint firstItem="qeH-Qh-9FK" firstAttribute="centerY" secondItem="9PX-pH-g6m" secondAttribute="centerY" id="dXW-JB-A9q"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="amountOwed" destination="HSt-QI-wZD" id="Lwa-GW-LEY"/>
+                                            <outlet property="expenseName" destination="qeH-Qh-9FK" id="Wui-dN-jLv"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -174,10 +202,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="urh-KG-QmP"/>
                     </view>
+                    <connections>
+                        <outlet property="groupNameLabel" destination="8Ju-Xs-7Kg" id="BLG-Wb-aJm"/>
+                        <outlet property="groupProfilePicture" destination="65n-O8-yl2" id="bCF-8m-S4k"/>
+                        <outlet property="tableView" destination="olm-Uc-L9F" id="oWi-gm-hbV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLu-8W-HGY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2187" y="53"/>
+            <point key="canvasLocation" x="2244" y="51"/>
         </scene>
         <!--Splitty-->
         <scene sceneID="SXb-tu-D7U">
@@ -201,7 +234,7 @@
         <!--Profile-->
         <scene sceneID="YmA-XN-QpF">
             <objects>
-                <viewController id="nCQ-yF-Q0x" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nCQ-yF-Q0x" customClass="UserProfileViewController" customModule="Splitty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pId-a1-Kel">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -244,13 +277,15 @@ EFlvdXJlSW5UaGVzZUdyb3Vwc0xhYmVsVmlldw
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AdQ-eA-jJP">
                                 <rect key="frame" x="20" y="50" width="335" height="100"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VLn-eW-Zdt">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="VLn-eW-Zdt">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="Cer-Q5-eXr"/>
                                             <constraint firstAttribute="width" secondItem="VLn-eW-Zdt" secondAttribute="height" multiplier="1:1" id="Obz-Uz-3Cc"/>
                                             <constraint firstAttribute="width" constant="100" id="WRG-3M-EI8"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="b6i-kP-6YV"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="dQd-vr-MWV"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HhN-o7-Li4">
@@ -293,6 +328,12 @@ EFlvdXJlSW5UaGVzZUdyb3Vwc0xhYmVsVmlldy50b3AgPSBTdGFjayBWaWV3LmJvdHRvbSArIDMwA
                         <viewLayoutGuide key="safeArea" id="5ig-YB-yzh"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="AWV-cG-Ph4"/>
+                    <connections>
+                        <outlet property="firstName" destination="zpZ-CW-lNl" id="kyK-kN-usd"/>
+                        <outlet property="lastName" destination="Fe7-1z-Gnq" id="L41-G3-4hc"/>
+                        <outlet property="picture" destination="VLn-eW-Zdt" id="XIm-DZ-EQZ"/>
+                        <outlet property="tableView" destination="gcQ-dq-5NV" id="2L3-6U-ztd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tHj-JU-mbm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -317,4 +358,7 @@ EFlvdXJlSW5UaGVzZUdyb3Vwc0xhYmVsVmlldy50b3AgPSBTdGFjayBWaWV3LmJvdHRvbSArIDMwA
             <point key="canvasLocation" x="-644" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultImage" width="225" height="225"/>
+    </resources>
 </document>

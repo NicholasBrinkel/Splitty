@@ -21,6 +21,8 @@
 		0332AAB020CB11CF0061FE12 /* SplittyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0332AAAF20CB11CF0061FE12 /* SplittyUITests.swift */; };
 		033DCF0F20E9DDF00047B911 /* GroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033DCF0E20E9DDF00047B911 /* GroupDetailViewController.swift */; };
 		034C5C2120EAB0AB00EF9525 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034C5C2020EAB0AB00EF9525 /* User.swift */; };
+		85B8CA522125CA2F00CB3100 /* UIViewController+Deselection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B8CA512125CA2F00CB3100 /* UIViewController+Deselection.swift */; };
+		85B8CA542125E79500CB3100 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B8CA532125E79500CB3100 /* UserProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		0332AAB120CB11CF0061FE12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		033DCF0E20E9DDF00047B911 /* GroupDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailViewController.swift; sourceTree = "<group>"; };
 		034C5C2020EAB0AB00EF9525 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		85B8CA512125CA2F00CB3100 /* UIViewController+Deselection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Deselection.swift"; sourceTree = "<group>"; };
+		85B8CA532125E79500CB3100 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 			children = (
 				0316E04B20E07ADE00A66829 /* GroupsViewController.swift */,
 				033DCF0E20E9DDF00047B911 /* GroupDetailViewController.swift */,
+				85B8CA532125E79500CB3100 /* UserProfileViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 				0332AA9B20CB11CF0061FE12 /* Info.plist */,
 				0332AA9320CB11CF0061FE12 /* Splitty.xcdatamodeld */,
 				0316E05320E07E1400A66829 /* Data */,
+				85B8CA502125CA0600CB3100 /* Extensions */,
 				0316E05420E07E2F00A66829 /* View Controllers */,
 			);
 			path = Splitty;
@@ -160,6 +166,14 @@
 				0332AAB120CB11CF0061FE12 /* Info.plist */,
 			);
 			path = SplittyUITests;
+			sourceTree = "<group>";
+		};
+		85B8CA502125CA0600CB3100 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				85B8CA512125CA2F00CB3100 /* UIViewController+Deselection.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +315,8 @@
 				034C5C2120EAB0AB00EF9525 /* User.swift in Sources */,
 				0332AA8D20CB11CF0061FE12 /* AppDelegate.swift in Sources */,
 				0316E04C20E07ADE00A66829 /* GroupsViewController.swift in Sources */,
+				85B8CA522125CA2F00CB3100 /* UIViewController+Deselection.swift in Sources */,
+				85B8CA542125E79500CB3100 /* UserProfileViewController.swift in Sources */,
 				0316E04E20E07BA300A66829 /* Group.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,8 +491,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N8K37W2LYY;
+				DEVELOPMENT_TEAM = 2Z8J3XLL88;
 				INFOPLIST_FILE = Splitty/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -493,8 +510,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N8K37W2LYY;
+				DEVELOPMENT_TEAM = 2Z8J3XLL88;
 				INFOPLIST_FILE = Splitty/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

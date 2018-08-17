@@ -46,10 +46,13 @@ struct Expense: Equatable, Hashable {
             self.peoplePaying[Person()] = randomAmount
         }
         
+        self.peoplePaying[User.person] = Double(arc4random_uniform(UInt32(60)))
+        
         
         
         self.hashValue = Int(arc4random())
         self.totalValue = Double(arc4random_uniform(UInt32(250)))
+        
     }
     
     mutating func add(person: Person, paying amount: Double) {

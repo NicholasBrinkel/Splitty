@@ -33,14 +33,11 @@ struct Group: Equatable, Hashable {
         self.name = names[randomInt]
         
         self.expenses = []
-        for _ in 0...randomInt {
+        for _ in 0...4 {
             let expense = Expense()
             expenses.append(expense)
         }
         self.hashValue = Int(arc4random())
-        
-        members = []
-        expenses = []
     }
     
     init(groupName name: String, members: [Person], expenses: [Expense], picture: UIImage) {
@@ -71,6 +68,4 @@ struct Group: Equatable, Hashable {
     func getAmountFor(person: Person, expense: Expense) -> Double? {
         return expense.getAmountFor(person: person)
     }
-    
-    func 
 }
